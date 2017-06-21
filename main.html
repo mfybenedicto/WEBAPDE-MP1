@@ -1,8 +1,64 @@
 <html>
     <head>
+        <title>Social Network</title>
+        
+        <style>
+            body{
+                background-color:#adeda8;
+            }
+            
+            #menuDiv{
+                background-color: #449140;
+                height: 60px;
+                position: fixed;
+                top: 0;
+                left:0;
+                width:100%;
+            }
+            
+            #buttonGroup{
+                text-align: right;
+                padding-top: 18px;
+                padding-right: 40px;
+            }
+            
+            button{
+                background-color: #449140;
+                color: white;
+                font-size: 17px;
+                border-radius: 4px;
+            }
+            
+            #mainDiv{
+                position: relative;
+                top: 60px;
+                height: 100%;
+              padding-left: 350;
+            }
+            
+            #postDiv{
+                background-color:ghostwhite;
+                height: 100%;
+                width: 50%;
+                position: absolute;
+                margin: 0 auto;
+            }
+        </style>
     </head>
-
+    
     <body>
-        BADING MARK
+        <div id = "menuDiv">
+            <div id = "buttonGroup">
+                 <button id = "userButton" type="submit">
+                    <!--image tag with a thumbnail of a user-->
+                    Name
+                </button>
+                <button id = "homeButton">Home</button>
+            </div>
+        </div>
+        <div id = "mainDiv">
+            <div id = "postDiv">
+            </div>
+        </div>
     </body>
 </html>
