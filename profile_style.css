@@ -31,10 +31,19 @@ button{
     height: 100%;
 }
 
+#profilePic{
+    position: relative;
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
 #postDiv{
     background-color:ghostwhite;
     height: 100%;
     width: 50%;
     position: relative;
-    margin: 0 auto;
+    padding-top: 30px; 
 }
+
