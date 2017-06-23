@@ -18,6 +18,10 @@ body{
     padding-right: 40px;
 }
 
+body{
+		overflow-y: hidden;
+}
+
 button{
     background-color: #449140;
     color: white;
@@ -33,8 +37,9 @@ button{
 
 #postDiv{
     background-color:ghostwhite;
-    height: 100%;
+    height: 90%;
     width: 50%;
     position: relative;
     margin: 0 auto;
+	overflow:auto;
 }

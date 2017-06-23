@@ -7,6 +7,28 @@
         <script src = "jquery-3.2.1.min.js">
             
         </script>
+		
+		
+		<script>
+    $(document).ready(function(){
+       $("#homeButton").click(function(){
+           
+           $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
+               console.log(obj);
+               for(var i=0;i<obj.length;i++){
+                   var newDiv = $("<div>");
+                   newDiv.html(obj[i].title);
+                   $("#postDiv").append(newDiv);
+                   
+              //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
+                   
+               }
+           })
+       });
+    });
+    
+    </script>
+		
     </head>
     
     <body>
@@ -20,7 +42,9 @@
             </div>
         </div>
         <div id = "mainDiv">
+		
             <div id = "postDiv">
+			hello bading
             </div>
         </div>
     </body>
