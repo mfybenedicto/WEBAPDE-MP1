@@ -35,7 +35,7 @@ button{
     height: 100%;
 }
 
-#postDiv{
+.postDiv{
     background-color:ghostwhite;
     height: 90%;
     width: 50%;

@@ -11,22 +11,55 @@
 		
 		<script>
     $(document).ready(function(){
-       $("#homeButton").click(function(){
-           
-           $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
-               console.log(obj);
-               for(var i=0;i<obj.length;i++){
-                   var newDiv = $("<div>");
-                   newDiv.html(obj[i].title);
-                   $("#postDiv").append(newDiv);
-                   
+	
+		var pagenum = 1;
+			$.get("https://jsonplaceholder.typicode.com/posts",function(obj){
+               console.log(obj.length);
+               for(var i=(obj.length-1)-(10*(pagenum-1));i>=(obj.length-10)-(10*(pagenum-1));i--){
+					console.log(i)
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+				  
+                   newDiv.html(obj[i].title+obj[i].body);
+                   $("#postsDiv").append(newDiv);
+                   $("#postsDiv").append(space);
               //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
                    
-               }
-           })
+				}
+			})
+			   
+       $("#viewMore").click(function(){
+           pagenum++;
+           $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
+               console.log(obj);
+			   /*
+			   obj.length = 99;
+			   current objlength = objlength-(10*(pagenum-1)) // if nagmove ng page
+			   i = objlength; //initial
+			   hanggang saan  = currentobjlength - 10;
+			     i = ob
+				 for(var i=obj.length;i<obj.length-(10*pagenum);i--){
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+                   newDiv.html(obj[i].title+obj[i].body);
+                   $("#postDiv").append(newDiv);
+                   $("#postDiv").append(space);
+              //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
+			   */
+               for(var i=(obj.length-1)-(10*(pagenum-1));i>=(obj.length-10)-(10*(pagenum-1));i--){
+					console.log(i)
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+				   newDiv.addClass()
+                   newDiv.html(obj[i].title+obj[i].body);
+                   $("#postsDiv").append(newDiv);
+                   $("#postsDiv").append(space);
+			    }
+           });
        });
-    });
+	   
     
+	});
     </script>
 		
     </head>
@@ -42,10 +75,15 @@
             </div>
         </div>
         <div id = "mainDiv">
-		
-            <div id = "postDiv">
-			hello bading
-            </div>
+		<div >
+		   <div class="postDiv">
+            <div id = "postsDiv">
+				hello bading
+				
+				</div>
+				<button style="position:absolute;left:110;" id="viewMore"> View More </button>
+			</div>
+			</div>
         </div>
     </body>
 </html>
