@@ -13,14 +13,17 @@
     $(document).ready(function(){
 	
 		var pagenum = 1;
+		$.get("https://jsonplaceholder.typicode.com/users",function(users){
+		
 			$.get("https://jsonplaceholder.typicode.com/posts",function(obj){
                console.log(obj.length);
                for(var i=(obj.length-1)-(10*(pagenum-1));i>=(obj.length-10)-(10*(pagenum-1));i--){
 					console.log(i)
                    var newDiv = $("<div>"); 
 				   var space = $("<br>");
-				  
-                   newDiv.html(obj[i].title+obj[i].body);
+				  var userid = parseInt(obj[i].userId)
+		//		  alert(users[9].name)
+                   newDiv.html(users[userid-1].name+"<br>"+obj[i].title+"<br>"+obj[i].body);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
               //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
@@ -50,15 +53,16 @@
 					console.log(i)
                    var newDiv = $("<div>"); 
 				   var space = $("<br>");
+				    var userid = parseInt(obj[i].userId)
 				   newDiv.addClass()
-                   newDiv.html(obj[i].title+obj[i].body);
+                   newDiv.html(users[userid-1].name+"<br>"+obj[i].title+"<br>"+obj[i].body);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
 			    }
            });
        });
 	   
-    
+    })
 	});
     </script>
 		
