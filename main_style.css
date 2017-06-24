@@ -26,6 +26,11 @@ button{
     border-radius: 4px;
 }
 
+#viewMore{
+    position: relative;
+    left: 180px;
+}
+
 #mainDiv{
     position: relative;
     top: 60px;

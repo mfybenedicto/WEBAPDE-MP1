@@ -1,0 +1,65 @@
+    $(document).ready(function(){
+	
+		var pagenum = 1;
+		$.get("https://jsonplaceholder.typicode.com/users",function(users){
+		
+			$.get("https://jsonplaceholder.typicode.com/posts",function(obj){
+               console.log(obj.length);
+               for(var i=(obj.length-1)-(10*(pagenum-1));i>=(obj.length-10)-(10*(pagenum-1));i--){
+					console.log(i)
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+				  var userid = parseInt(obj[i].userId)
+				  
+				    var str = users[userid-1].name;
+				var result = str.link("profile.html");
+			
+				   newDiv.addClass()
+                   newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
+					 $("#postsDiv").append(result);
+                   $("#postsDiv").append(newDiv);
+                   $("#postsDiv").append(space);
+              //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
+                   
+				}
+			})
+			   
+       $("#viewMore").click(function(){
+           pagenum++;
+           $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
+               console.log(obj);
+			   /*
+			   obj.length = 99;
+			   current objlength = objlength-(10*(pagenum-1)) // if nagmove ng page
+			   i = objlength; //initial
+			   hanggang saan  = currentobjlength - 10;
+			     i = ob
+				 for(var i=obj.length;i<obj.length-(10*pagenum);i--){
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+                   newDiv.html(obj[i].title+obj[i].body);
+                   $("#postDiv").append(newDiv);
+                   $("#postDiv").append(space);
+              //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
+			   */
+               for(var i=(obj.length-1)-(10*(pagenum-1));i>=(obj.length-10)-(10*(pagenum-1));i--){
+					console.log(i)
+                   var newDiv = $("<div>"); 
+				   var space = $("<br>");
+				    var userid = parseInt(obj[i].userId)
+				   newDiv.addClass()
+                 
+				    var str = users[userid-1].name;
+				var result = str.link("profile.html");
+			
+				   newDiv.addClass()
+                   newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
+					 $("#postsDiv").append(result);
+                   $("#postsDiv").append(newDiv);
+                   $("#postsDiv").append(space);
+			    }
+           });
+       });
+	   
+    })
+	});
