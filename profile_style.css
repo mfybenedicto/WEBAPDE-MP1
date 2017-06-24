@@ -28,7 +28,7 @@ button{
 #mainDiv{
     position: relative;
     top: 60px;
-    height: 100%;
+    height: 90%;
 }
 
 #profilePic{
@@ -41,7 +41,7 @@ button{
 
 #postDiv{
     background-color:ghostwhite;
-    height: 50%;
+    height: 55%;
     top: 10px;
     left: 380px;
     width: 50%;

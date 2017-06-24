@@ -11,18 +11,19 @@
 				   var space = $("<br>");
 				  var userid = parseInt(obj[i].userId)
 				  
-				    var str = users[userid-1].name;
-				var result = str.link("profile.html");
+				    var username = document.createElement("a");
+			username.append(users[userid-1].name)
+			$(username).attr('href', 'profile.html?userId='+(userid-1));
 			
 				   newDiv.addClass()
                    newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
-					 $("#postsDiv").append(result);
+					 $("#postsDiv").append(username);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
               //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
                    
 				}
-			})
+			});
 			   
        $("#viewMore").click(function(){
            pagenum++;
@@ -49,12 +50,12 @@
 				    var userid = parseInt(obj[i].userId)
 				   newDiv.addClass()
                  
-				    var str = users[userid-1].name;
-				var result = str.link("profile.html");
-			
+			var username = document.createElement("a");
+			username.append(users[userid-1].name)
+			$(username).attr('href', 'profile.html?userId='+(userid-1));
 				   newDiv.addClass()
                    newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
-					 $("#postsDiv").append(result);
+					 $("#postsDiv").append(username);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
 			    }

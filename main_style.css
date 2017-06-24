@@ -28,7 +28,7 @@ button{
 
 #viewMore{
     position: relative;
-    left: 180px;
+    left: 320px;
 }
 
 #mainDiv{
@@ -37,7 +37,7 @@ button{
     height: 100%;
 }
 
-.postDiv{
+.postContainerDiv{
     background-color:ghostwhite;
     height: 90%;
     width: 50%;
