@@ -1,5 +1,6 @@
 body{
     background-color:#adeda8;
+    overflow-y: hidden;
 }
 
 #menuDiv{
@@ -16,10 +17,6 @@ body{
     text-align: right;
     padding-top: 18px;
     padding-right: 40px;
-}
-
-body{
-		overflow-y: hidden;
 }
 
 button{
