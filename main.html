@@ -22,8 +22,13 @@
                    var newDiv = $("<div>"); 
 				   var space = $("<br>");
 				  var userid = parseInt(obj[i].userId)
-		//		  alert(users[9].name)
-                   newDiv.html(users[userid-1].name+"<br>"+obj[i].title+"<br>"+obj[i].body);
+				  
+				    var str = users[userid-1].name;
+				var result = str.link("profile.html");
+			
+				   newDiv.addClass()
+                   newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
+					 $("#postsDiv").append(result);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
               //     or $("#container").append($("<div>"+obj[i].title + "<div>"));
@@ -55,7 +60,13 @@
 				   var space = $("<br>");
 				    var userid = parseInt(obj[i].userId)
 				   newDiv.addClass()
-                   newDiv.html(users[userid-1].name+"<br>"+obj[i].title+"<br>"+obj[i].body);
+                 
+				    var str = users[userid-1].name;
+				var result = str.link("profile.html");
+			
+				   newDiv.addClass()
+                   newDiv.html("<br>"+obj[i].title+"<br>"+obj[i].body);
+					 $("#postsDiv").append(result);
                    $("#postsDiv").append(newDiv);
                    $("#postsDiv").append(space);
 			    }
