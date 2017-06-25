@@ -37,6 +37,9 @@ button{
     width: 250px;
     height: 250px;
     margin: auto;
+    background-image: url("default_prof.jpg");
+    background-size: 255px 250px;
+    background-repeat: no-repeat;
 }
 
 #postDiv:hover{
