@@ -39,6 +39,10 @@ button{
     margin: auto;
 }
 
+#postDiv:hover{
+    overflow:visible;
+}
+
 #postDiv{
     background-color:ghostwhite;
     height: 55%;
@@ -47,5 +51,6 @@ button{
     width: 50%;
     position: relative;
     padding-top: 30px; 
+    overflow: hidden;
 }
 

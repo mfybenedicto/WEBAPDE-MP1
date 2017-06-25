@@ -37,11 +37,15 @@ button{
     height: 100%;
 }
 
+.postContainerDiv:hover{
+    overflow:auto;
+}
 .postContainerDiv{
     background-color:ghostwhite;
     height: 90%;
     width: 50%;
+    padding-right: 60px;
     position: relative;
     margin: 0 auto;
-	overflow:auto;
+	overflow:hidden;
 }
