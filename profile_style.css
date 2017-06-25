@@ -42,18 +42,18 @@ button{
     background-repeat: no-repeat;
 }
 
-#postDiv:hover{
-    overflow:visible;
-}
-
-#postDiv{
+#postsDiv{
     background-color:ghostwhite;
-    height: 55%;
-    top: 10px;
-    left: 380px;
     width: 50%;
     position: relative;
-    padding-top: 30px; 
-    overflow: hidden;
+    top: -150px;
+    left: 30%;
 }
 
+#albumDiv{
+    position: relative;
+    top: 50px;
+    height: 200px;
+    width: 250px;
+    background-color: red;
+}

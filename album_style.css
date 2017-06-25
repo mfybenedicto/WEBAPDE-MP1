@@ -26,26 +26,12 @@ button{
     border-radius: 4px;
 }
 
-#viewMore{
-    position: relative;
-    left: 320px;
-}
-
 #mainDiv{
     position: relative;
     top: 60px;
     height: 90%;
 }
 
-.postContainerDiv:hover{
-    overflow:auto;
-}
-.postContainerDiv{
-    background-color:ghostwhite;
-    height: 90%;
-    width: 50%;
-    padding-right: 60px;
-    position: relative;
-    margin: 0 auto;
-	overflow:hidden;
+h1{
+    text-align: center;
 }
