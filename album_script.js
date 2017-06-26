@@ -29,6 +29,14 @@
      
         $("#viewMore").click(function(){
            pageNum++;
+           if(pageNum > 5)
+               {
+                   alert("There are no more photos to show.");
+               }
+            else
+                {
+                    
+                
            $.get("https://jsonplaceholder.typicode.com/photos",function(photo){
                console.log(photo);
 			   /*
@@ -56,6 +64,7 @@
                 i++;
             }
            });
+        }
        });
      
 });

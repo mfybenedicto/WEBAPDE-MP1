@@ -32,6 +32,13 @@
 			   
        $("#viewMore").click(function(){
            pagenum++;
+           if(pagenum > 10)
+               {
+                   alert("There are no more posts to show.");
+               }
+           else
+               {
+                   
            $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
                console.log(obj);
 			   /*
@@ -67,6 +74,7 @@
                    $("#postsDiv").append(space);
 			    }
            });
+        }
        });
 	   
     })
