@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var url = new URL(string);
 		var userID = url.searchParams.get("userId");
         var defImage = 'album_thumbnail.png';
-		alert(userID);
+		//alert(userID);
     
         
         //load posts
@@ -44,7 +44,7 @@ $(document).ready(function(){
                     height: 60,
                     title: titleSrc
                 }).appendTo($('<a/>').attr({
-                    href: 'album.html?albumID=' + ((albums[selector-i].id)-1)
+                    href: 'album.html?albumID=' + ((albums[selector-i].id)-1) + '&userID=' + userID
                 }).appendTo($('#thumbnails')));
                 
                 i++;
