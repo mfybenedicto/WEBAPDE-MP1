@@ -33,6 +33,7 @@ button{
 }
 
 h1{
+    position: relative;
     text-align: center;
 }
 
@@ -41,10 +42,7 @@ h1{
     height: 100%;
 }
 
-.picSample{
-    background-color: red;
-    height: 300px;
-    width: 300px;
-    margin: 10px 37px;
-    float:left;
+#viewMore{
+    position: relative;
+    left 300px;
 }

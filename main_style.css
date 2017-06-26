@@ -12,9 +12,16 @@ body{
     left:0;
     width:100%;
 }
-            
-#buttonGroup{
-    text-align: right;
+
+#leftBGroup{
+    float: left;
+    padding-top: 18px;
+    padding-left: 40px;
+}
+
+
+#rightBGroup{
+    float: right;
     padding-top: 18px;
     padding-right: 40px;
 }
