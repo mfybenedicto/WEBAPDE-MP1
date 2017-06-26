@@ -5,8 +5,11 @@ $(document).ready(function(){
         var defImage = 'album_thumbnail.png';
 		alert(userID);
     
+        
         //load posts
         $.get("https://jsonplaceholder.typicode.com/users",function(users){
+            //load user's name
+            $("#username").html(users[userID].name);
         $.get("https://jsonplaceholder.typicode.com/posts",function(obj){
             var i = 0;
             var selector = userID * 10;
@@ -14,14 +17,9 @@ $(document).ready(function(){
             while(i < 10){
                 var newDiv = $("<div>"); 
 				var space = $("<br>");
-				  
-				var username = document.createElement("a");
-                username.append(users[userID].name)
-                $(username).attr('href', 'profile.html?userId='+(userID));
                 
                 newDiv.html("<br>"+obj[(selector-i)].title+"<br>"+obj[(selector-i)].body);
-                $("#postsDiv").append(username);
-                $("#postsDiv").append("<br>"); // di ko nilagay space cuz it doesnt work for some reason
+                // di ko nilagay space cuz it doesnt work for some reason
                 
                 $("#postsDiv").append(newDiv);
                 $("#postsDiv").append(space);
