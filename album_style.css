@@ -35,3 +35,16 @@ button{
 h1{
     text-align: center;
 }
+
+#albumContainer{
+    overflow: scroll;
+    height: 100%;
+}
+
+#picSample{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    margin: 10px 37px;
+    float:left;
+}
