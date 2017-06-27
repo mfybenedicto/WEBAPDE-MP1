@@ -1,0 +1,32 @@
+body{
+    background-color:#adeda8;
+}
+
+#menuDiv{
+    z-index: 1;
+    background-color: #449140;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+}
+            
+#buttonGroup{
+    text-align: right;
+    padding-top: 18px;
+    padding-right: 40px;
+}
+
+button{
+    background-color: #449140;
+    color: white;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+#mainDiv{
+    position: relative;
+    top: 60px;
+    height: 90%;
+}
