@@ -5,6 +5,10 @@
 		var albumID = url.searchParams.get("albumID");
         var defImage = 'album_thumbnail.png';
         var pageNum = 1;
+     
+        $.get("https://jsonplaceholder.typicode.com/users",function(users){
+            $("#username").html(users[userID].name + "'s album");
+        })
 		//alert(albumID);
 		//alert(userID);
         //alert("HELLO");

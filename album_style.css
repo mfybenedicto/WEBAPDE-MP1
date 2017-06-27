@@ -1,6 +1,6 @@
 body{
     background-color:#adeda8;
-    overflow-y: hidden;
+    overflow-y: visible;
 }
 
 #menuDiv{
@@ -37,12 +37,23 @@ h1{
     text-align: center;
 }
 
+#albumContainer:hover{
+    overflow-y: visible;
+}
+
 #albumContainer{
-    overflow: scroll;
+    overflow-y: hidden;
     height: 100%;
+    overflow-x: hidden;
+}
+
+.mainContainer{
+    
 }
 
 #viewMore{
+    clear:both;
     position: relative;
-    left 300px;
+    top: 0;
+    left: 550px;
 }
