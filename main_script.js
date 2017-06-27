@@ -31,8 +31,13 @@
 			});
 		
        $("#viewAlbums").click(function(){
-           window.open()
-       });
+            window.open("album_system.html" , "_self")
+        })
+                
+            $("#viewPhotos").click(function(){
+            window.open("photo_system.html" , "_self")
+        })
+    
                 
        $("#viewMore").click(function(){
            pagenum++;

@@ -18,11 +18,10 @@
         //load photos
         $.get("https://jsonplaceholder.typicode.com/photos", function(photo){
             
-            alert(selector);
+            //alert(selector);
             while(i < 10){
                 //alert("hello")
                 $('<img />').attr({
-                    id: "myImg",
                     alt: photo[selector-i].title,
                     src: photo[selector-i].thumbnailUrl,
                     width: 300,
