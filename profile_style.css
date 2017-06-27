@@ -58,6 +58,10 @@ button{
     background-color: red;
 }
 
+#details{
+    text-align: center;
+}
+
 #viewPhotos{
     position: relative;
     top: 65px;
