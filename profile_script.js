@@ -52,4 +52,8 @@ $(document).ready(function(){
                 
         });
         //load photos
+        $("#homeButton").click(function(){
+            window.open("main.html" , "_self")
+        })
+    
 		})

@@ -5,8 +5,8 @@
 		var albumID = url.searchParams.get("albumID");
         var defImage = 'album_thumbnail.png';
         var pageNum = 1;
-     
-        $.get("https://jsonplaceholder.typicode.com/users",function(users){
+        
+     $.get("https://jsonplaceholder.typicode.com/users",function(users){
             $("#username").html(users[userID].name + "'s album");
         })
 		//alert(albumID);
@@ -22,15 +22,24 @@
             while(i < 10){
                 //alert("hello")
                 $('<img />').attr({
+                    id: "myImg",
+                    alt: photo[selector-i].title,
                     src: photo[selector-i].thumbnailUrl,
                     width: 300,
-                    height: 300
+                    height: 300,
+                    onclick: "alert('Title: ' + this.alt)"
                 }).appendTo($('#albumContainer'));
                 
                 i++;
             }
         })
-     
+        
+        
+        
+        $("#homeButton").click(function(){
+            window.open("main.html" , "_self")
+        })
+        
         $("#viewMore").click(function(){
            pageNum++;
            if(pageNum > 5)
@@ -72,3 +81,4 @@
        });
      
 });
+
