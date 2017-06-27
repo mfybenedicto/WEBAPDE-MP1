@@ -29,7 +29,11 @@
                    
 				}
 			});
-			   
+		
+       $("#viewAlbums").click(function(){
+           window.open()
+       });
+                
        $("#viewMore").click(function(){
            pagenum++;
            if(pagenum > 10)
